@@ -32,7 +32,7 @@ abstract class FoodDatabase : RoomDatabase() {
 
     abstract fun rateDAO(): RateDAO
 
-    abstract fun IngredientDAO(): IngredientDAO
+    abstract fun ingredientDAO(): IngredientDAO
 
     companion object {
         const val DATABASE_NAME = "Food-Database"

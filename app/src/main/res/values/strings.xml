@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FPASEP</string>
+    <string name="app_name">Food Mobile</string>
     <string name="input_email_text">Type your email</string>
     <string name="input_password_text">Type your password</string>
     <string name="input_phone_text">Type your phone number</string>
