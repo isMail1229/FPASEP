@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Food Mobile Color-->
+    <color name="yellow">#FFC700</color>
+    <color name="yellow_dark">#BA971B</color>
+    <color name="grey">#8D92A3</color>
+    <color name="white_grey">#F9FAFF</color>
+    <color name="black_font">#020202</color>
+    <color name="grey_light">#8D92A3</color>
+    <color name="blue_font">#1ABC9C</color>
+    <color name="red_alert">#D9435E</color>
 </resources>

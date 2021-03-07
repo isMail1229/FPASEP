@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView3"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            tools:text="Item Ordered" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:elevation="@dimen/_4sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="@+id/materialTextView3"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView3">
+
+            <ImageView
+                android:id="@+id/iv_food_payment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ContentDescription"
+                tools:src="@tools:sample/avatars" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_food_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_reguler"
+            android:textColor="@color/black_font"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView"
+            tools:text="Cherry Healthy" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/price_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_reguler"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/title_food_payment"
+            app:layout_constraintTop_toBottomOf="@+id/title_food_payment"
+            tools:text="IDR 289.000" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/item_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_reguler"
+            android:textSize="@dimen/_11ssp"
+            app:fontFamily="@font/poppins_reguler"
+            app:layout_constraintBottom_toBottomOf="@+id/price_payment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title_food_payment"
+            tools:text="14 items" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView4"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline2"
+            tools:text="Details Transaction" />
+
+        <!--Food Name And Price-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_name_payment"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialTextView4"
+            tools:text="Food Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_price_payment"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/food_name_payment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/food_name_payment"
+            tools:text="IDR 123456789" />
+
+        <!--Driver And Ongkir-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_driver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/food_name_payment"
+            tools:text="Driver" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_driver_price"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/food_driver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/food_driver"
+            tools:text="IDR 123456789" />
+
+        <!--Tax And Price Tax-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_tax"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/food_driver"
+            tools:text="Tax 10%" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_tax_price"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/food_tax"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/food_tax"
+            tools:text="IDR 123456789" />
+
+        <!--Tax And Price Tax-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_total"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/food_tax"
+            tools:text="Total Price" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/food_total_price"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textColor="@color/blue_font"
+            app:layout_constraintBottom_toBottomOf="@id/food_total"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/food_total"
+            tools:text="IDR 123456789" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView5"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline3"
+            tools:text="Delivered To:" />
+
+        <!--Name Delivered-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_name_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialTextView5"
+            tools:text="Name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name_reciever"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/title_name_receiver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_name_receiver"
+            tools:text="IDR 123456789" />
+
+        <!--Phone Number-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_phone_number_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_name_receiver"
+            tools:text="Phone No." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phone_number"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/title_phone_number_receiver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_phone_number_receiver"
+            tools:text="123456789" />
+
+        <!--Address-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_address_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_phone_number_receiver"
+            tools:text="Address" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/address_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/title_address_receiver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_address_receiver"
+            tools:text="Setra Duta Palima" />
+
+        <!--House No-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_home_no_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_address_receiver"
+            tools:text="Home No." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/home_no_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/title_home_no_receiver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_home_no_receiver"
+            tools:text="A5 Hook" />
+
+        <!--City-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_city_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:textColor="@color/grey_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_home_no_receiver"
+            tools:text="City" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/city_receiver"
+            style="@style/DefaultFontFoodMobile.TitleText16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@id/title_city_receiver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_city_receiver"
+            tools:text="Bandung" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

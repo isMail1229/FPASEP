@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_img"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@id/title_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2">
+
+        <ImageView
+            android:id="@+id/iv_profile_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_photo"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_name"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintBottom_toTopOf="@id/et_full_name"
+        app:layout_constraintStart_toStartOf="@id/et_full_name"
+        tools:text="Full Name" />
+
+    <EditText
+        android:id="@+id/et_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_fullname_text"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        tools:ignore="Autofill" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_email"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="@id/et_full_name"
+        app:layout_constraintTop_toBottomOf="@id/et_full_name"
+        tools:text="Email" />
+
+    <EditText
+        android:id="@+id/et_email_create"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_email_text"
+        android:inputType="textEmailAddress"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_email"
+        tools:ignore="Autofill" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_password_create"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="@id/et_email_create"
+        app:layout_constraintTop_toBottomOf="@id/et_email_create"
+        tools:text="Password" />
+
+    <EditText
+        android:id="@+id/et_password_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_password_text"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_password_create"
+        tools:ignore="Autofill" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/bg_button_yellow"
+        android:fontFamily="@font/poppins_medium"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/et_password_register"
+        app:layout_constraintStart_toStartOf="@id/et_password_register"
+        app:layout_constraintTop_toBottomOf="@id/et_password_register"
+        tools:text="Continue" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

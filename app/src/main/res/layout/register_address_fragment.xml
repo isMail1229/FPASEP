@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/custom_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_phone_number_register"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintBottom_toTopOf="@id/et_phone_number_register"
+        app:layout_constraintStart_toStartOf="@id/et_phone_number_register"
+        tools:text="Phone Number" />
+
+    <EditText
+        android:id="@+id/et_phone_number_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_phone_text"
+        android:inputType="phone"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        tools:ignore="Autofill" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_address_register"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="@id/et_phone_number_register"
+        app:layout_constraintTop_toBottomOf="@id/et_phone_number_register"
+        tools:text="Address" />
+
+    <EditText
+        android:id="@+id/et_address_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_address_text"
+        android:inputType="textMultiLine"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_address_register"
+        tools:ignore="Autofill" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_house_number_register"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="@id/et_address_register"
+        app:layout_constraintTop_toBottomOf="@id/et_address_register"
+        tools:text="House Number" />
+
+    <EditText
+        android:id="@+id/et_house_number_reg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_house_no_text"
+        android:inputType="text"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_house_number_register"
+        tools:ignore="Autofill,TextFields" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_city_register"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="@id/et_city_register"
+        app:layout_constraintTop_toBottomOf="@id/et_house_number_reg"
+        tools:text="City" />
+
+    <EditText
+        android:id="@+id/et_city_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_city_text"
+        android:inputType="text"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_city_register"
+        tools:ignore="Autofill,TextFields" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/bg_button_yellow"
+        android:fontFamily="@font/poppins_medium"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/et_city_register"
+        app:layout_constraintStart_toStartOf="@id/et_city_register"
+        app:layout_constraintTop_toBottomOf="@id/et_city_register"
+        tools:text="Sign Up Now" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
