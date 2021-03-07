@@ -9,4 +9,6 @@
     <string name="input_fullname_text">Type your full name</string>
     <string name="minus">-</string>
     <string name="plus">+</string>
+    <string name="access_failed_permission_message">Akses ditolak, silahkan ubah perizinan di pengaturan</string>
+
 </resources>
