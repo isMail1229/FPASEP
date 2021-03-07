@@ -1,9 +1,6 @@
 package id.asep.fpasep.datasource.local.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Update
+import androidx.room.*
 import id.asep.fpasep.datasource.local.models.Ingredient
 
 @Dao
@@ -18,5 +15,6 @@ interface IngredientDAO {
     @Update
     suspend fun update(ingredient: Ingredient): Int
 
+    @Query("SELECT COUNT(id) FROM ingredient")
     suspend fun count(): Int
 }

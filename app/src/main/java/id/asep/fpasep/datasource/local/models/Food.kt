@@ -4,7 +4,6 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverter
-import java.math.BigDecimal
 
 @Entity(tableName = "food", inheritSuperIndices = true)
 data class Food(
@@ -12,7 +11,7 @@ data class Food(
     @ColumnInfo(name = "id") val id: Long,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "description") val description: Long,
-    @ColumnInfo(name = "price") val price: BigDecimal,
+    @ColumnInfo(name = "price") val price: Long,
     @ColumnInfo(name = "type") val type: String,
     @ColumnInfo(name = "food_photo") val foodPhoto: String?,
 ) {

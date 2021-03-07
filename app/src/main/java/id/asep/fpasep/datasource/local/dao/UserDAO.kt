@@ -1,9 +1,6 @@
 package id.asep.fpasep.datasource.local.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Update
+import androidx.room.*
 import id.asep.fpasep.datasource.local.models.User
 
 @Dao
@@ -18,9 +15,9 @@ interface UserDAO {
     @Update
     suspend fun update(user: User): Int
 
+    @Query("SELECT COUNT(id) FROM user")
     suspend fun count(): Int
 
+    @Query("SELECT * FROM user WHERE id = :id")
     suspend fun getUserById(id: Long): User?
-
-    suspend fun getUserByServerId(serverId: Long): User?
 }
