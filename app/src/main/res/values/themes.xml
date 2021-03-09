@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.FPASEP" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.FPASEP" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -16,7 +16,7 @@
 
     <!--Theme Food Mobile-->
 
-    <style name="FoodMobile" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="FoodMobile" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/yellow</item>
         <item name="colorPrimaryVariant">@color/yellow_dark</item>
@@ -24,6 +24,15 @@
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/yellow_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:navigationBarColor">@color/yellow</item>
+        <item name="android:windowBackground">@color/yellow</item>
+        <item name="android:fontFamily">@font/poppins_reguler</item>
+
     </style>
 
     <style name="DefaultFontFoodMobile" parent="TextAppearance.AppCompat">

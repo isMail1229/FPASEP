@@ -2,7 +2,7 @@ package id.asep.fpasep.utils.common
 
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import id.asep.fpasep.R
 import id.asep.fpasep.utils.extension.invisible
 import id.asep.fpasep.utils.extension.setImagesToGlide
