@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/custom_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title_phone_number_register"
@@ -27,7 +20,7 @@
         android:layout_marginBottom="@dimen/_4sdp"
         app:layout_constraintBottom_toTopOf="@id/et_phone_number_register"
         app:layout_constraintStart_toStartOf="@id/et_phone_number_register"
-        tools:text="Phone Number" />
+        android:text="@string/phone" />
 
     <EditText
         android:id="@+id/et_phone_number_register"
@@ -56,7 +49,7 @@
         android:layout_marginBottom="@dimen/_4sdp"
         app:layout_constraintStart_toStartOf="@id/et_phone_number_register"
         app:layout_constraintTop_toBottomOf="@id/et_phone_number_register"
-        tools:text="Address" />
+        android:text="@string/address" />
 
     <EditText
         android:id="@+id/et_address_register"
@@ -85,7 +78,7 @@
         android:layout_marginBottom="@dimen/_4sdp"
         app:layout_constraintStart_toStartOf="@id/et_address_register"
         app:layout_constraintTop_toBottomOf="@id/et_address_register"
-        tools:text="House Number" />
+        android:text="@string/house_number" />
 
     <EditText
         android:id="@+id/et_house_number_reg"
@@ -114,7 +107,7 @@
         android:layout_marginBottom="@dimen/_4sdp"
         app:layout_constraintStart_toStartOf="@id/et_city_register"
         app:layout_constraintTop_toBottomOf="@id/et_house_number_reg"
-        tools:text="City" />
+        android:text="@string/city" />
 
     <EditText
         android:id="@+id/et_city_register"
@@ -139,13 +132,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_24sdp"
-        android:background="@drawable/bg_button_yellow"
-        android:fontFamily="@font/poppins_medium"
-        android:textAllCaps="false"
+        style="@style/FoodMobileButton"
         app:layout_constraintEnd_toEndOf="@id/et_city_register"
         app:layout_constraintStart_toStartOf="@id/et_city_register"
         app:layout_constraintTop_toBottomOf="@id/et_city_register"
-        tools:text="Sign Up Now" />
+        android:text="@string/sign_up_now" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

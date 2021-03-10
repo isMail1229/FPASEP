@@ -16,7 +16,7 @@
 
     <!--Theme Food Mobile-->
 
-    <style name="FoodMobile" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="FoodMobile" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/yellow</item>
         <item name="colorPrimaryVariant">@color/yellow_dark</item>

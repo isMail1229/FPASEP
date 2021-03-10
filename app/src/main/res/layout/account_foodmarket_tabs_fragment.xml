@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_rate_app"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Rate App" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_help_center"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rate_app"
+        tools:text="Help Center" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_privacy"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_help_center"
+        tools:text="Privacy Policy" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_terms"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_privacy"
+        tools:text="Terms Conditions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

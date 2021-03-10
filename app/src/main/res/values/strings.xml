@@ -14,5 +14,17 @@
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="create_new_account">Create new account</string>
-
+    <string name="sign_in_title">Sign In</string>
+    <string name="sign_in_description">Find your best ever meal</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="sign_up_description">Register and eat</string>
+    <string name="phone">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="house_number">House Number</string>
+    <string name="city">City</string>
+    <string name="sign_up_now">Sign Up Now</string>
+    <string name="full_name">Full Name</string>
+    <string name="next_continue">Continue</string>
+    <string name="address_title">Address</string>
+    <string name="address_description">Make sure it’s valid</string>
 </resources>

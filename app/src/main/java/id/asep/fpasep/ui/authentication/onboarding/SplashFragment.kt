@@ -9,20 +9,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import id.asep.fpasep.databinding.SplashFragmentBinding
-import id.asep.fpasep.ui.MainActivity
 
 class SplashFragment : Fragment() {
     private var _binding: SplashFragmentBinding? = null
     private val binding
         get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val act = activity
-        if (act is MainActivity) {
-            act.hideActionBar()
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

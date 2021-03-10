@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
 import com.google.android.material.snackbar.Snackbar
 import id.asep.fpasep.R
+import id.asep.fpasep.ui.MainActivity
 import pub.devrel.easypermissions.EasyPermissions
 
 inline fun <reified VM : ViewModel> viewModels(owner: ViewModelStoreOwner) =
@@ -31,6 +32,13 @@ fun Fragment.toastShort(text: String) {
 
 fun Fragment.toastLong(text: String) {
     Toast.makeText(requireContext(), text, Toast.LENGTH_LONG).show()
+}
+
+fun Fragment.setTitle(type: Int, title: String, description: String, imgPath: String = "") {
+    val act = activity
+    if (act is MainActivity) {
+        act.setupToolbar(type, title, description, imgPath)
+    }
 }
 
 /*@Suppress("SpreadOperator")*/
