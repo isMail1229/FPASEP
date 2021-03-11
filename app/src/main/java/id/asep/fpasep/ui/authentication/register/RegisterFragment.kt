@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import id.asep.fpasep.R
 import id.asep.fpasep.databinding.RegisterAddressFragmentBinding
 import id.asep.fpasep.ui.MainActivity
@@ -31,6 +32,11 @@ class RegisterFragment : Fragment() {
             getString(R.string.address_title),
             getString(R.string.address_description)
         )
+
+        binding.btnSignIn.setOnClickListener {
+            val action = RegisterFragmentDirections.actionRegisterFragmentToMainMenuFragment()
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {

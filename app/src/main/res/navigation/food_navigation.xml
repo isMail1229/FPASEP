@@ -15,7 +15,9 @@
         android:label="LoginFragment">
         <action
             android:id="@+id/action_loginFragment_to_mainMenuFragment"
-            app:destination="@id/mainMenuFragment" />
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_loginFragment_to_registerPhotoFragment"
             app:destination="@id/registerPhotoFragment" />
@@ -52,6 +54,8 @@
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_splashFragment_to_mainMenuFragment"
-            app:destination="@id/mainMenuFragment" />
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

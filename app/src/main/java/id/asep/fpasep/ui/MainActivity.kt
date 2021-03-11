@@ -2,15 +2,20 @@ package id.asep.fpasep.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import id.asep.fpasep.R
 import id.asep.fpasep.databinding.ActivityMainBinding
+import id.asep.fpasep.utils.extension.invisible
 import id.asep.fpasep.utils.extension.setImagesToGlide
+import id.asep.fpasep.utils.extension.visible
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -43,19 +48,39 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setupToolbar(type: Int, title: String, description: String, imgPath: String = "") {
+        supportActionBar?.show()
+        binding.containerToolbar.toolbar.visible()
+        binding.containerToolbar.avatarImgBar.visible()
         when (type) {
             COMMON_TOOLBAR -> {
                 initializeToolbar(title, description)
+                binding.containerToolbar.avatarImgBar.invisible()
             }
             DASHBOARD_TOOLBAR -> {
                 initializeToolbar(title, description)
                 if (imgPath.isNotBlank()) {
                     binding.containerToolbar.avatarImgBar.setImagesToGlide(imgPath)
                 } else {
-                    binding.containerToolbar.avatarImgBar.setImagesToGlide(R.drawable.ic_add_photo)
+                    binding.containerToolbar.avatarImgBar.setImageDrawable(
+                        ContextCompat.getDrawable(this, R.drawable.ic_add_photo)
+                    )
                 }
             }
+            WITHOUT_TOOLBAR -> {
+                supportActionBar?.hide()
+            }
         }
+    }
+
+    fun setupBottomNavigation(
+        bottomNavigationView: BottomNavigationView,
+        navHostFragment: NavHostFragment
+    ) {
+        val navHostController = navHostFragment.findNavController()
+        val appBarConfiguration =
+            AppBarConfiguration(setOf(R.id.homeFragment, R.id.orderFragment, R.id.accountFragment))
+        setupActionBarWithNavController(navHostController, appBarConfiguration)
+        bottomNavigationView.setupWithNavController(navHostController)
     }
 
     private fun initializeToolbar(title: String, description: String) {
@@ -73,5 +98,6 @@ class MainActivity : AppCompatActivity() {
         const val FOOD_LOGIN_PAGE = "NEWS_DETAIL"
         const val COMMON_TOOLBAR = 1
         const val DASHBOARD_TOOLBAR = 2
+        const val WITHOUT_TOOLBAR = 3
     }
 }

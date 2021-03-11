@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import id.asep.fpasep.databinding.SplashFragmentBinding
+import id.asep.fpasep.ui.MainActivity
+import id.asep.fpasep.utils.extension.setTitle
 
 class SplashFragment : Fragment() {
     private var _binding: SplashFragmentBinding? = null
@@ -27,6 +29,7 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setTitle(MainActivity.WITHOUT_TOOLBAR, "", "")
         setupAnimation()
     }
 
