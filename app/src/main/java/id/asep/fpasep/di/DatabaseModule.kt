@@ -11,6 +11,8 @@ import dagger.hilt.components.SingletonComponent
 import id.asep.fpasep.FoodApplication
 import id.asep.fpasep.datasource.local.FoodDatabase
 import id.asep.fpasep.datasource.local.dao.*
+import id.asep.fpasep.datasource.local.service.UserService
+import id.asep.fpasep.datasource.local.service.implementation.UserServiceImpl
 import id.asep.fpasep.utils.helper.FoodSharedPreferences
 import id.asep.fpasep.utils.helper.implementation.FoodSharedPreferencesImpl
 import javax.inject.Singleton
@@ -77,4 +79,11 @@ object DatabaseModule {
         return FoodSharedPreferencesImpl(sharedPreferences)
     }
 
+    @Singleton
+    @Provides
+    fun provideUserServices(userDAO: UserDAO): UserService {
+        return UserServiceImpl(
+            userDAO
+        )
+    }
 }

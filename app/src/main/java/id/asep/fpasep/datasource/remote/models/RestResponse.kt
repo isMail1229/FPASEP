@@ -10,7 +10,7 @@ data class RestResponse<T>(
 
 @JsonClass(generateAdapter = true)
 data class MetaData(
-    @Json(name = "code") val code: Long,
+    @Json(name = "code") val code: Int,
     @Json(name = "status") val status: String,
     @Json(name = "message") val message: String
 )
