@@ -61,8 +61,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0-alpha01'
 
     // Navigation Component
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
 
     // Room components
     implementation "androidx.room:room-runtime:2.2.6"
@@ -78,10 +78,10 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:2.31.2-alpha"
 
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    kapt "androidx.hilt:hilt-compiler:1.0.0-alpha03"
+    kapt "androidx.hilt:hilt-compiler:1.0.0-beta01"
 
     // Activity KTX for viewModels()
-    implementation "androidx.activity:activity-ktx:1.2.0"
+    implementation "androidx.activity:activity-ktx:1.2.1"
 
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
@@ -116,7 +116,7 @@ dependencies {
     implementation 'com.facebook.stetho:stetho:1.5.1'
 
     // paging library
-    implementation 'androidx.paging:paging-runtime-ktx:3.0.0-beta01'
+    implementation 'androidx.paging:paging-runtime-ktx:3.0.0-beta02'
 
     // Shimmer
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
@@ -137,4 +137,13 @@ dependencies {
 
     // lottie
     implementation 'com.airbnb.android:lottie:3.6.0'
+
+    // CameraX core library using camera2 implementation
+    implementation "androidx.camera:camera-camera2:1.1.0-alpha02"
+
+    // CameraX Lifecycle Library
+    implementation "androidx.camera:camera-lifecycle:1.1.0-alpha02"
+    
+    // CameraX View class
+    implementation "androidx.camera:camera-view:1.0.0-alpha22"
 }

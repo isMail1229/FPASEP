@@ -3,16 +3,15 @@ package id.asep.fpasep.utils.extension
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.*
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import id.asep.fpasep.R
 import id.asep.fpasep.ui.MainActivity
 import pub.devrel.easypermissions.EasyPermissions
 
-inline fun <reified VM : ViewModel> viewModels(owner: ViewModelStoreOwner) =
-    ViewModelProvider(owner).get(VM::class.java)
-
-inline fun <reified VM : ViewModel> Fragment.fragmentViewModel(provider: ViewModelProvider.Factory) =
-    ViewModelProvider(this, provider).get(VM::class.java)
+inline fun <reified VM : ViewModel> Fragment.fragmentViewModel() =
+    ViewModelProvider(requireActivity()).get(VM::class.java)
 
 fun <T> Fragment.observe(liveData: LiveData<T>, observer: Observer<T>) {
     liveData.observe(viewLifecycleOwner, observer)
@@ -60,6 +59,10 @@ fun Fragment.askPermissions(
             *permissions
         )
     }
+}
+
+fun Fragment.navigateTo(action: NavDirections) {
+    findNavController().navigate(action)
 }
 
 /*@Suppress("SpreadOperator")*/

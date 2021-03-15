@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/_50sdp" />
+        app:layout_constraintGuide_percent="0" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/title_name"
@@ -57,7 +57,7 @@
         android:background="@drawable/bg_form_selector"
         android:fontFamily="@font/poppins_reguler"
         android:hint="@string/input_fullname_text"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:paddingStart="@dimen/_8sdp"
         android:paddingEnd="@dimen/_8sdp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,15 +123,45 @@
         app:layout_constraintTop_toBottomOf="@id/title_password_create"
         tools:ignore="Autofill" />
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_password_confirm_create"
+        style="@style/DefaultFontFoodMobile.TitleText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:text="@string/confirm_password"
+        app:layout_constraintStart_toStartOf="@id/et_email_create"
+        app:layout_constraintTop_toBottomOf="@id/et_password_register" />
+
+    <EditText
+        android:id="@+id/et_password_confirm_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/bg_form_selector"
+        android:fontFamily="@font/poppins_reguler"
+        android:hint="@string/input_password_text"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_password_confirm_create"
+        tools:ignore="Autofill" />
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_sign_in"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_24sdp"
         style="@style/FoodMobileButton"
-        app:layout_constraintEnd_toEndOf="@id/et_password_register"
-        app:layout_constraintStart_toStartOf="@id/et_password_register"
-        app:layout_constraintTop_toBottomOf="@id/et_password_register"
+        app:layout_constraintEnd_toEndOf="@id/et_password_confirm_register"
+        app:layout_constraintStart_toStartOf="@id/et_password_confirm_register"
+        app:layout_constraintTop_toBottomOf="@id/et_password_confirm_register"
         android:text="@string/next_continue" />
 
 

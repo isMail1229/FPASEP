@@ -1,3 +1,5 @@
 package id.asep.fpasep.ui.authentication.viewmodel.state
 
-class LoginState
+sealed class LoginState
+class LoginError(val errorMessage: String) : LoginState()
+object LoginSuccess : LoginState()

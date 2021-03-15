@@ -14,13 +14,11 @@
         android:name="id.asep.fpasep.ui.authentication.login.LoginFragment"
         android:label="LoginFragment">
         <action
-            android:id="@+id/action_loginFragment_to_mainMenuFragment"
-            app:destination="@id/mainMenuFragment"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true" />
-        <action
             android:id="@+id/action_loginFragment_to_registerPhotoFragment"
             app:destination="@id/registerPhotoFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_customDialog"
+            app:destination="@id/customDialog" />
     </fragment>
 
     <fragment
@@ -28,10 +26,11 @@
         android:name="id.asep.fpasep.ui.authentication.register.RegisterFragment"
         android:label="RegisterFragment">
         <action
-            android:id="@+id/action_registerFragment_to_mainMenuFragment"
-            app:destination="@id/mainMenuFragment"
-            app:popUpTo="@id/registerFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_registerFragment_to_customDialog"
+            app:destination="@id/customDialog" />
+        <argument
+            android:name="registerPhotoArgs"
+            app:argType="id.asep.fpasep.ui.authentication.domain.RegisterPhotoDomain" />
     </fragment>
 
     <fragment
@@ -58,4 +57,17 @@
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <dialog
+        android:id="@+id/customDialog"
+        android:name="id.asep.fpasep.utils.common.CustomDialog"
+        android:label="CustomDialog">
+        <action
+            android:id="@+id/action_customDialog_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/customDialog"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="dialogArgs"
+            app:argType="id.asep.fpasep.ui.authentication.domain.DialogDomain" />
+    </dialog>
 </navigation>

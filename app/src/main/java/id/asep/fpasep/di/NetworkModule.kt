@@ -1,5 +1,6 @@
 package id.asep.fpasep.di
 
+import com.haroldadmin.cnradapter.NetworkResponseAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -7,6 +8,7 @@ import dagger.hilt.components.SingletonComponent
 import id.asep.fpasep.datasource.repository.user.auth.AuthInterceptor
 import id.asep.fpasep.utils.common.FoodConstants.Companion.BASE_URL
 import id.asep.fpasep.utils.helper.FoodSharedPreferences
+import id.asep.fpasep.utils.helper.NullResponseBodyConverter
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -59,7 +61,10 @@ object NetworkModule {
         moshiConverterFactory: MoshiConverterFactory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL).client(okHttpClient)
+            .baseUrl(BASE_URL)
+            .client(okHttpClient)
+            .addCallAdapterFactory(NetworkResponseAdapterFactory())
+            .addConverterFactory(NullResponseBodyConverter())
             .addConverterFactory(moshiConverterFactory)
             .build()
     }

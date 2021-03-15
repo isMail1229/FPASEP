@@ -7,16 +7,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import id.asep.fpasep.databinding.SplashFragmentBinding
+import id.asep.fpasep.datasource.repository.user.UserRepository
 import id.asep.fpasep.ui.MainActivity
+import id.asep.fpasep.utils.extension.navigateTo
 import id.asep.fpasep.utils.extension.setTitle
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SplashFragment : Fragment() {
     private var _binding: SplashFragmentBinding? = null
     private val binding
         get() = _binding!!
 
+    @Inject
+    lateinit var userRepository: UserRepository
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -75,8 +81,12 @@ class SplashFragment : Fragment() {
     }
 
     private fun openNextFragment() {
-        val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
-        findNavController().navigate(action)
+        val action = if (userRepository.isLoggedIn()) {
+            SplashFragmentDirections.actionSplashFragmentToMainMenuFragment()
+        } else {
+            SplashFragmentDirections.actionSplashFragmentToLoginFragment()
+        }
+        navigateTo(action)
     }
 
     override fun onDestroyView() {
